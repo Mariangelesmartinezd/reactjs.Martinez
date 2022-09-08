@@ -1,25 +1,30 @@
-import logo from './logo.svg';
+import { useState } from 'react';
+import NavBar from './components/NavBar/NavBar';
+import './components/NavBar/NavBar.css';
+import './components/CartWidget/carrito.css';
 import './App.css';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import './components/ItemListContainer/ItemListContainer.css'
+import Counter from './components/Counter/Counter';
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+  const stock = 5;
+  const [und, setUnd] = useState(0);
 
-export default App;
+  const sumar = () => und < stock ? setUnd(und + 1) : alert('PRODUCTO AGOTADO')
+  const restar = () => und > 0 ? setUnd(und - 1) : alert('ERROR, minimo 1 unidad')
+
+  return ( 
+    <>
+      <div className="App">
+        <NavBar und={und} />
+        <header className="header">
+          <ItemListContainer greeting='hola' />
+        </header>
+        <Counter stock={stock} sumar={sumar} restar={restar} und={und} />
+        </div>
+      </>
+      ) 
+}
+      export default App;
