@@ -17,13 +17,16 @@ function App() {
 
   return ( 
     <>
-      <div className="App">
+      
         <NavBar und={und} />
         <header className="header">
-          <ItemListContainer greeting='hola' />
+          <h2>Llego la hora de merendar!!</h2>
         </header>
+        <main className='main'>
+        <ItemListContainer/>
         <Counter stock={stock} sumar={sumar} restar={restar} und={und} />
-        </div>
+        </main>
+      
       </>
       ) 
 }
