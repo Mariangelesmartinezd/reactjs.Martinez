@@ -2,7 +2,7 @@ import data from "../Data";
 import { useEffect, useState } from "react";
 import ItemList from "../ItemList/ItemList"
 
-const ItemListContainer = ({ greeting }) => {
+const ItemListContainer = ({ }) => {
 
   const [prodList, setProdlist] = useState([]);
 
@@ -21,8 +21,7 @@ const ItemListContainer = ({ greeting }) => {
 
   return (
     <>
-     
-      <ItemList lista={prodList}/>
+      <ItemList lista={prodList} />
     </>
   )
 };

@@ -1,8 +1,8 @@
-import { useState } from "react";
+
 
 
 const Counter = ({sumar, restar, stock, und}) => {
-
+    
    
     return (
         <>

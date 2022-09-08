@@ -6,6 +6,7 @@ import './App.css';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import './components/ItemListContainer/ItemListContainer.css'
 import Counter from './components/Counter/Counter';
+import './components/Item/Item.css'
 
 
 function App() {
@@ -15,19 +16,19 @@ function App() {
   const sumar = () => und < stock ? setUnd(und + 1) : alert('PRODUCTO AGOTADO')
   const restar = () => und > 0 ? setUnd(und - 1) : alert('ERROR, minimo 1 unidad')
 
-  return ( 
+  return (
     <>
+
+      <NavBar und={und} />
+      <header className="header">
+        <h2>Llego la hora de merendar!!</h2>
+      </header>
+     
+        <ItemListContainer />
+        <Counter stock={stock} sumar={sumar} restar={restar} />
       
-        <NavBar und={und} />
-        <header className="header">
-          <h2>Llego la hora de merendar!!</h2>
-        </header>
-        <main className='main'>
-        <ItemListContainer/>
-        <Counter stock={stock} sumar={sumar} restar={restar} und={und} />
-        </main>
-      
-      </>
-      ) 
+
+    </>
+  )
 }
-      export default App;
+export default App;
