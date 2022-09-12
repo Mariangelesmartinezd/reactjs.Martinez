@@ -23,9 +23,12 @@ function App() {
       <header className="header">
         <h2>Llego la hora de merendar!!</h2>
       </header>
-     
-        <ItemListContainer />
-        <Counter stock={stock} sumar={sumar} restar={restar} />
+       <main>
+        <ItemListContainer/>
+       <Counter stock={stock} sumar={sumar} restar={restar} />
+       </main>
+        
+        
       
 
     </>

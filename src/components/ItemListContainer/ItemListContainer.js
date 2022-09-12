@@ -17,7 +17,7 @@ const ItemListContainer = ({ }) => {
     setTimeout(() => {
       resolve(data)
     }, 2000);
-  });
+  })
 
   return (
     <>

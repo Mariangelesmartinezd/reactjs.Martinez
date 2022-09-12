@@ -1,0 +1,29 @@
+.main{
+    background-color: #c58838;
+    color: #ffff;
+    text-align: center;
+}
+
+.img-detail{
+    width: 250px;
+    height: 250px;
+    margin-bottom: 0.5rem;
+}
+
+.nombre-producto{
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 800;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.product-information{
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
