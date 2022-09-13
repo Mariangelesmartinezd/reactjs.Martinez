@@ -1,4 +1,4 @@
-import Counter from '../Counter/Counter';
+
 import cart from '../img/cartshop.jpeg';
 
 const CartWidget = () => {

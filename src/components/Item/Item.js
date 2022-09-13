@@ -1,5 +1,4 @@
-
-
+import '../Item/Item.css';
 
 const Item = ({nombre, precio, img}) => {
   return (

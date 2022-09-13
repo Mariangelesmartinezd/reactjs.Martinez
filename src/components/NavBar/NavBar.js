@@ -1,7 +1,7 @@
 import logotipo from '../img/logo.jpeg'
 import CartWidget from '../CartWidget/CartWidget';
 
-const NavBar = ({und}) => {
+const NavBar = () => {
     return (
         <div className="navBar-container">
             <div>
@@ -12,7 +12,7 @@ const NavBar = ({und}) => {
                 <li><a href="">Menú</a></li>
                 <li><a href="">Nosotros</a></li>
                 <li><a href="">Registro</a></li>
-                <div className='contador'>{und}<CartWidget /></div>
+                <div className='contador'><CartWidget /></div>
             </div>
         </div>
     );

@@ -1,37 +1,33 @@
-import { useState } from 'react';
+
 import NavBar from './components/NavBar/NavBar';
 import './components/NavBar/NavBar.css';
 import './components/CartWidget/carrito.css';
 import './App.css';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+//import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import './components/ItemListContainer/ItemListContainer.css'
-import Counter from './components/Counter/Counter';
+
 import './components/Item/Item.css'
 
 
-function App() {
-  const stock = 5;
-  const [und, setUnd] = useState(0);
 
-  const sumar = () => und < stock ? setUnd(und + 1) : alert('PRODUCTO AGOTADO')
-  const restar = () => und > 0 ? setUnd(und - 1) : alert('ERROR, minimo 1 unidad')
+function App() {
+  
 
   return (
     <>
 
-      <NavBar und={und} />
+      <NavBar/>
       <header className="header">
-        <h2>Llego la hora de merendar!!</h2>
+        <h2>Llegó la hora de merendar!!</h2>
       </header>
        <main>
-        <ItemListContainer/>
-       <Counter stock={stock} sumar={sumar} restar={restar} />
+        <ItemDetailContainer/>
+       
        </main>
         
         
-      
-
-    </>
+      </>
   )
 }
 export default App;
