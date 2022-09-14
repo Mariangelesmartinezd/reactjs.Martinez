@@ -1,32 +1,33 @@
 import data from "../Data";
 import { useEffect, useState } from "react";
-import Counter from "../Counter/Counter";
 import ItemList from "../ItemList/ItemList"
+import { useParams } from "react-router-dom";
 
 const ItemListContainer = ({ }) => {
 
-  const onAdd = (quantity)=>{
-    console.log(`compraste ${quantity} unidades`)
-  }
+  const [prodList, setProdList] = useState([]);
 
-  const [prodList, setProdlist] = useState([]);
-
+  const { tipoId } = useParams();
 
   useEffect(() => {
-    getProducts.then((response) => {
-      setProdlist(response)
+    const getProdList = new Promise(resolve => {
+      setTimeout(() => {
+        resolve(data)
+      }, 2000);
     });
-  }, []);
+    if (tipoId) {
+      getProdList.then(response => setProdList(response.filter(churros => churros.tipo === tipoId)))
+    } else {
+      getProdList.then(response => setProdList(response));
+    }
+  }, [tipoId])
 
-  const getProducts = new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve(data)
-    }, 2000);
-  })
-
+  const onAdd = (quantity) => {
+    console.log(`compraste ${quantity} unidades`)
+  }
   return (
     <>
-      <Counter initial={1} stock={5} onAdd={onAdd}/>
+      
       <ItemList lista={prodList} />
     </>
   )

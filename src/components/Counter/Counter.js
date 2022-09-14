@@ -1,6 +1,6 @@
 import './Counter.css';
 import { useState, useEffect } from 'react';
-
+import { Link } from 'react-router-dom';
 
 const Counter = ({initial, stock, onAdd}) => {
     const [count, setCount] = useState(parseInt(initial));  
@@ -16,9 +16,10 @@ const Counter = ({initial, stock, onAdd}) => {
         <div className='counter'>
             <button className='rest' onClick={restar}>-</button>
             <span>{count}</span>
-            <button className='add' onClick={sumar}>+</button>
+            <button className='add' onClick={sumar}>+</button><span></span><button disabled={stock <=0} onClick ={() => onAdd(count)}> Agregar al carrito</button>
             <div>
-                <button disabled={stock <=0} onClick ={() => onAdd(count)}> Agregar al carrito</button>
+                
+                <Link className='volver' to='/'>Regresar</Link>
             </div>
         </div>
     )

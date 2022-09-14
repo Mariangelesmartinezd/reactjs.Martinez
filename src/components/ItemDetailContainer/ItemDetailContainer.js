@@ -1,26 +1,30 @@
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { useState, useEffect } from "react";
+import data from "../Data";
+import { useParams } from "react-router-dom";
 
-const articule =  {id: '10', nombre: "Red Velvet Cookie and cream", tipo: "Cookies", cantidad: 1, desc: "Deliciosa cookie  de red velvet con chocolate blanco, cookies de vainilla, rellena de cheesecake cream, recién horneada dorada por fuera y húmeda por dentro", precio: 340, img: 'https://i.pinimg.com/236x/1a/ea/d2/1aead2a6dd9518a6abf03b251a878190.jpg'};
 
 const ItemDetailContainer = () => {
-  const [detail, setDetail] = useState({});
+
+  const [prodList, setProdList] = useState({});
+
+  const { detalleId } = useParams();
 
   useEffect(() => {
-    getDetail.then((response) => {
-      setDetail(response)
+    const getProdList = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(data)
+      }, 2000);
     });
+
+    getProdList.then(response => setProdList(response.filter(data => data.id === parseInt(detalleId))))
   }, []);
 
-  const getDetail = new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve(articule)
-    }, 2000);
-  })
-
+  
+console.log(prodList)
   return (
     <>
-      <ItemDetail detail={detail}/>
+      <ItemDetail prodList={prodList} />
     </>
   );
 }

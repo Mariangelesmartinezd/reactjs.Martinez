@@ -15,3 +15,10 @@ button{
     border-radius: 5px;
     color: rgb(66, 37, 37);
 }
+
+.volver{
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 1rem;
+    color: chocolate;
+}
