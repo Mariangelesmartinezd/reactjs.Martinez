@@ -8,23 +8,25 @@ const ItemDetailContainer = () => {
 
   const [prodList, setProdList] = useState({});
 
-  const { detalleId } = useParams();
+  const { detalleId} = useParams();
 
   useEffect(() => {
-    const getProdList = new Promise((resolve, reject) => {
+    const getProdList = new Promise(resolve => {
       setTimeout(() => {
         resolve(data)
       }, 2000);
     });
-
-    getProdList.then(response => setProdList(response.filter(data => data.id === parseInt(detalleId))))
+    const dataFiltrada = data.filter((prodList) => prodList.id === detalleId);
+    console.log(dataFiltrada)
+    setProdList(...dataFiltrada)
+    
   }, []);
 
   
-console.log(prodList)
+
   return (
     <>
-      <ItemDetail prodList={prodList} />
+      {prodList && <ItemDetail info={prodList} />}
     </>
   );
 }
