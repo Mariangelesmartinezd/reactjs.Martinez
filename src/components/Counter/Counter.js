@@ -18,7 +18,6 @@ const Counter = ({initial, stock, onAdd}) => {
             <span>{count}</span>
             <button className='add' onClick={sumar}>+</button><span></span><button disabled={stock <=0} onClick ={() => onAdd(count)}> Agregar al carrito</button>
             <div>
-                
                 <Link className='volver' to='/'>Regresar</Link>
             </div>
         </div>

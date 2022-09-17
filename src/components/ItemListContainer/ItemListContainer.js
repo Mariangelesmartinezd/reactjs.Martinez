@@ -22,9 +22,7 @@ const ItemListContainer = ({ }) => {
     }
   }, [tipoId])
 
-  const onAdd = (quantity) => {
-    console.log(`compraste ${quantity} unidades`)
-  }
+  
   return (
     <>
       

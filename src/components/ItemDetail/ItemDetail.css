@@ -57,6 +57,18 @@
     padding: 15px;
 }
 
+.link{
+   
+    font-size: 14px;
+    font-weight: 600;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    padding: 15px;
+    color: #c55938;
+    text-align: center;
+}
+
 span{
     padding: 10px;
 }
