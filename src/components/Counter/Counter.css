@@ -9,16 +9,3 @@
     background-color: rgb(230, 197, 89);
     border: 1px solid chocolate;
 }
-button{
-    background-color: rgb(230, 197, 89);
-    border: 1px solid chocolate;
-    border-radius: 5px;
-    color: rgb(66, 37, 37);
-}
-
-.volver{
-    text-decoration: none;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin-bottom: 1rem;
-    color: chocolate;
-}

@@ -17,7 +17,7 @@ const ItemDetailContainer = () => {
       }, 2000);
     });
     const dataFiltrada = data.filter((prodList) => prodList.id === detalleId);
-    console.log(dataFiltrada)
+    //console.log(dataFiltrada)
     setProdList(...dataFiltrada)
     
   }, []);

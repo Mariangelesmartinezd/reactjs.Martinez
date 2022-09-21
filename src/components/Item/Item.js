@@ -9,7 +9,6 @@ const Item = ({info}) => {
         <div className="nombre-producto">{info.nombre}</div>
         <div className="precio-producto">{info.precio} $</div>
         <div className="detalle">Ver detalles del producto</div>
-        <div className="stock">Unidades disponibles  5</div>
       </div>
   )
 }
